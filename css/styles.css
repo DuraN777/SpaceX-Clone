@@ -8,4 +8,76 @@
 
 body {
   font-family: 'Familjen Grotesk', sans-serif;
+  background-color: black;
+  color: white;
+}
+
+/* NAV Links */
+a {
+  text-decoration: none;
+  color: white;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Header */
+.main-header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+  height: 100px;
+  padding: 0 30px;
+}
+
+/* Logo */
+.logo {
+  width: 210px;
+  height: auto;
+}
+
+.logo img {
+  display: block;
+  width: 100%; /* 100% of its container*/
+  height: auto;
+}
+
+/* Desktop Menu */
+.desktop-main-menu {
+  margin-right: 50px;
+}
+
+.desktop-main-menu ul {
+  display: flex;
+}
+
+.desktop-main-menu li {
+  position: relative;
+  margin-right: 20px;
+  padding-bottom: 2px;
+}
+
+/* Menu bottom animation */
+.desktop-main-menu ul li a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: white;
+  transform: scaleX(0);
+  transition: transform 0.4s ease-in-out;
+  transform-origin: left center;
+}
+
+.desktop-main-menu ul li a:hover::after {
+  transform: scaleX(1);
 }

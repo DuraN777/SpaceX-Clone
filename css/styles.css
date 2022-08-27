@@ -74,10 +74,102 @@ ul {
   height: 1px;
   background-color: white;
   transform: scaleX(0);
-  transition: transform 0.4s ease-in-out;
+  transition: transform 0.3s ease-in-out;
   transform-origin: left center;
 }
 
 .desktop-main-menu ul li a:hover::after {
   transform: scaleX(1);
+}
+
+/* Sections */
+section {
+  position: relative;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-transform: uppercase;
+}
+
+.section-inner {
+  position: absolute;
+  bottom: 200px;
+  left: 150px;
+  max-width: 560px;
+}
+
+.section-inner h4 {
+  font-size: 22px;
+  margin-bottom: 5px;
+  font-weight: 300;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.section-inner h2 {
+  font-size: 50px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  animation: fadeIn 0.5s ease-in-out 0.2s; /* 0.2s delay*/
+  animation-fill-mode: both; /* Stop from showing at start */
+}
+
+.section-inner a {
+  animation: fadeIn 0.5s ease-in-out 0.4s;
+  animation-fill-mode: both;
+}
+
+/* Background images */
+.section-a {
+  background-image: url('../img/section-a.webp');
+}
+
+/*  Utility */
+.btn {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+  min-width: 130px;
+  padding: 15px 50px;
+  margin-top: 10px;
+  border: 2px solid white;
+  text-transform: uppercase;
+  font-weight: bold;
+  overflow: hidden; /* stop hover effect from overflowing */
+  z-index: 2;
+}
+
+.btn:hover span {
+  color: black;
+}
+
+.btn .hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  z-index: -1; /* txt is over it */
+  transform: translateY(100%); /* push white bckground down 100% */
+  transition: transform 0.3s ease-in-out;
+  transform-origin: bottom;
+}
+
+.btn:hover .hover {
+  transform: translateY(0);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

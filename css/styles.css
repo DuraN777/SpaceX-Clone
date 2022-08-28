@@ -94,8 +94,8 @@ section {
 
 .section-inner {
   position: absolute;
-  bottom: 200px;
-  left: 150px;
+  bottom: 100px;
+  left: 50px;
   max-width: 560px;
 }
 
@@ -124,6 +124,21 @@ section {
   background-image: url('../img/section-a.webp');
 }
 
+.section-b {
+  background-image: url('../img/section-b.webp');
+}
+
+.section-c {
+  background-image: url('../img/section-c.webp');
+}
+
+.section-d {
+  background-image: url('../img/section-d.webp');
+}
+
+.section-e {
+  background-image: url('../img/section-e.webp');
+}
 /*  Utility */
 .btn {
   position: relative;
@@ -170,7 +185,7 @@ section {
 }
 
 .scroll-arrow {
-  animation: arrowBounce 3.5s ease-in infinite;
+  animation: arrowBounce 3s ease-in infinite;
 }
 
 /* Animations */

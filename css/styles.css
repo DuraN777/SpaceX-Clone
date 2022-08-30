@@ -12,7 +12,7 @@ body {
   color: white;
 }
 
-/* NAV Links */
+/* Links */
 a {
   text-decoration: none;
   color: white;
@@ -218,6 +218,62 @@ footer ul li a:hover{
   color: #aaa;
 }
 
+/* Hamburger Menu */
+/* Pop-u menu on the side; On top of the rest of content; Bars turn into an X on active; Dark Overlay over the site; Scroll Disabled*/
+
+.hamburger {
+  position: fixed;
+  top: 45px;
+  right: 20px;
+  z-index: 10;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  /* because its a button */
+  background: none;
+  border: none;
+}
+
+/* Hamburger lines */
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+  position: absolute;
+  width: 20px;
+  /* 2px lines */
+  height: 2px;
+  top: 0;
+  left: 0;
+  background-color: white;
+  transition: all 0.5s;
+}
+
+/* offset .hamburger lines */
+.hamburger-middle {
+  transform: translateY(5px);
+}
+
+.hamburger-bottom {
+  transform: translateY(10px);
+}
+
+/* Open Hammubrger, turn into X */
+.open {
+  top: 42px;
+  transform: rotate(90deg);
+}
+
+.open .hamburger-top {
+  transform: rotate(45deg) translateY(6px) translateX(6px);
+}
+
+.open .hamburger-middle {
+  display: none;
+}
+
+.open .hamburger-bottom {
+  transform: rotate(-45deg) translateY(6px) translateX(-6px);
+}
 
 /* Animations */
 @keyframes fadeIn {

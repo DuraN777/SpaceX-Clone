@@ -22,7 +22,7 @@ ul {
   list-style: none;
 }
 
-/* Header */
+      /* Header */
 .main-header {
   position: fixed;
   left: 0;
@@ -82,7 +82,7 @@ ul {
   transform: scaleX(1);
 }
 
-/* Sections */
+      /* Sections */
 section {
   position: relative;
   height: 100vh;
@@ -139,7 +139,7 @@ section {
 .section-e {
   background-image: url('../img/section-e.webp');
 }
-/*  Utility */
+      /*  Utility */
 .btn {
   position: relative;
   display: inline-block;
@@ -188,7 +188,7 @@ section {
   animation: arrowBounce 3s ease-in infinite;
 }
 
-/* Footer */
+      /* Footer */
 footer {
   position: relative;
   padding: 55px 0;
@@ -218,7 +218,7 @@ footer ul li a:hover{
   color: #aaa;
 }
 
-/* Hamburger Menu */
+      /* Hamburger Menu */
 /* Pop-u menu on the side; On top of the rest of content; Bars turn into an X on active; Dark Overlay over the site; Scroll Disabled*/
 
 .hamburger {
@@ -286,6 +286,71 @@ footer ul li a:hover{
   z-index: 5;
 }
 
+/* Hide mobile only items */
+.mobile-only {
+  display: none;
+}
+
+      /* Mobile Menu */
+.mobile-main-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 6;
+
+  /* center */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 350px;
+  height: 100%; 
+  background-color: black;
+
+  /* Push it to the right off the screen */
+  transform: translateX(100%);
+  transition: transform 0.5s ease-in-out ;
+}
+
+/* Bring Menu from right */
+.show-menu {
+  transform: translateX(0);
+}
+
+.mobile-main-menu ul {
+  display: flex;
+  flex-direction: column;
+  /* align to the right side of menu */
+  align-items: end;
+  justify-content: center;
+  padding: 50px;
+  width: 100%; /* of parent element*/
+}
+
+.mobile-main-menu ul li {
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  border-bottom: 1px gray dotted;
+  /* setting width 100% will move text to the left */
+  width: 100%;
+  text-align: right;
+  padding-bottom: 10px;
+}
+
+.mobile-main-menu ul li a {
+  /* block - hover on li element go activate a:hover */
+  display: block;
+  color: white;
+  transition: color 0.4s;
+}
+
+.mobile-main-menu ul li a:hover {
+  color: gray;
+}
+
+
+
+
 /* Animations */
 @keyframes fadeIn {
   0% {
@@ -318,10 +383,15 @@ footer ul li a:hover{
 
 /* Media Queries */
 
-@media (max-width: 1040px) {
+@media (max-width: 1130px) {
   /* Hide desktop menu */
   .desktop-main-menu {
     display: none;
+  }
+
+  /* Show it in hamburger-menu */
+  .mobile-only {
+    display: block;
   }
 }
 

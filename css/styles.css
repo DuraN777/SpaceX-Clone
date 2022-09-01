@@ -111,7 +111,7 @@ section {
   font-weight: 700;
   margin-bottom: 20px;
   animation: fadeIn 0.5s ease-in-out 0.2s; /* 0.2s delay*/
-  animation-fill-mode: both; /* Stop from showing at start */
+  animation-fill-mode: both; /* Stop from showing before h4, make delay effective*/
 }
 
 .section-inner a {
@@ -139,6 +139,7 @@ section {
 .section-e {
   background-image: url('../img/section-e.webp');
 }
+
       /*  Utility */
 .btn {
   position: relative;
@@ -348,7 +349,38 @@ footer ul li a:hover{
   color: gray;
 }
 
+      /* INNER PAGES */
+/* Background img*/
+/* Reminder: Section is already styled at row 86 */
+.bg-falcon9 {
+  background-image: url(../img/falcon-9.webp);
+}
 
+.section-animate {
+  animation: fadeInBg 2s ease-in-out;
+}
+
+/* Text */
+.section-inner-center {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.section-inner-center h1{
+  font-size: 100px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.section-inner-center h3{
+  font-weight: 300;
+  font-size: 20px;
+  animation: fadeIn 1s ease-in-out 0.2s;
+  animation-fill-mode: both;
+}
 
 
 /* Animations */
@@ -377,7 +409,17 @@ footer ul li a:hover{
   40% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
 
+/* Inner page bg-img */
+@keyframes fadeInBg {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
   }
 }
 

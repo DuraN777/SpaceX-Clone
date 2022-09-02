@@ -168,14 +168,28 @@ section {
   height: 100%;
   background-color: white;
   z-index: -1; /* txt is over it */
+
+
+  -webkit-transform: translateY(100%); 
+  -o-transform: translateY(100%); 
+  -moz-transform: translateY(100%); 
   transform: translateY(100%); /* push white bckground down 100% */
+
   -webkit-transition: transform 0.3s ease-in-out;
+  -moz-transition: transform 0.3s ease-in-out;
+  -o-transition: altransforml 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out;
+
   -webkit-transform-origin: bottom;
+  -moz-transform-origin: bottom;
+  -o-transform-origin: bottom;
   transform-origin: bottom;
 }
 
 .btn:hover .hover {
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -o-transform: translateY(0);
   transform: translateY(0);
 }
 

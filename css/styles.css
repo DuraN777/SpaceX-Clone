@@ -169,7 +169,9 @@ section {
   background-color: white;
   z-index: -1; /* txt is over it */
   transform: translateY(100%); /* push white bckground down 100% */
+  -webkit-transition: transform 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out;
+  -webkit-transform-origin: bottom;
   transform-origin: bottom;
 }
 

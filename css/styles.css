@@ -103,21 +103,47 @@ section {
   font-size: 22px;
   margin-bottom: 5px;
   font-weight: 300;
-  animation: fadeIn 0.5s ease-in-out;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.section-inner h4.show {
+  transform: translateY(0px);
+  opacity: 1;
 }
 
 .section-inner h2 {
   font-size: 50px;
   font-weight: 700;
   margin-bottom: 20px;
-  animation: fadeIn 0.5s ease-in-out 0.2s; /* 0.2s delay*/
-  animation-fill-mode: both; /* Stop from showing before h4, make delay effective*/
+  opacity: 0;
+  transform: translateY(100px);
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  transition-delay: 200ms, 200ms;
+}
+
+.section-inner h2.show {
+  transform: translateY(0px);
+  opacity: 1;
 }
 
 .section-inner a {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  transition-delay: 400ms, 400ms;
+}
+
+.section-inner a.show {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+/* .section-inner a {
   animation: fadeIn 0.5s ease-in-out 0.4s;
   animation-fill-mode: both;
-}
+} */
 
 /* Background images */
 .section-a {
@@ -168,21 +194,8 @@ section {
   height: 100%;
   background-color: white;
   z-index: -1; /* txt is over it */
-
-
-  -webkit-transform: translateY(100%); 
-  -o-transform: translateY(100%); 
-  -moz-transform: translateY(100%); 
   transform: translateY(100%); /* push white bckground down 100% */
-
-  -webkit-transition: transform 0.3s ease-in-out;
-  -moz-transition: transform 0.3s ease-in-out;
-  -o-transition: transform 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out;
-
-  -webkit-transform-origin: bottom;
-  -moz-transform-origin: bottom;
-  -o-transform-origin: bottom;
   transform-origin: bottom;
 }
 

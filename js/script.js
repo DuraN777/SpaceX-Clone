@@ -3,13 +3,20 @@ const btn = document.getElementById('menu-btn');
 const overlay = document.querySelector('.overlay');
 const menu = document.querySelector('.mobile-main-menu');
 
+// Inner section elements
 const h4 = document.querySelectorAll('h4');
 const h2 = document.querySelectorAll('h2');
 const newBtn = document.querySelectorAll('.btn')
 
 btn.addEventListener('click', navToggle);
-
 window.addEventListener('scroll', scrollFunction);
+
+window.addEventListener('scroll', animateBtn);
+animateBtn();
+window.addEventListener('scroll', animateH4);
+animateH4();
+window.addEventListener('scroll', animateH2);
+animateH2();
 
 function navToggle() {
   btn.classList.toggle('open');
@@ -25,22 +32,7 @@ function scrollFunction() {
 }
 
       //Section-Inner fadeIn Animation
-
 // h4 animation
-window.addEventListener('scroll', animateH4);
-
-function animateEelement(tags) {
-  const triggerBottom = window.innerHeight / 1;
-
-  tags.forEach(tag => {
-    const tagTop = tag.getBoundingClientRect().top;
-    if(tagTop < triggerBottom){
-      tag.classList.add('show')
-    } 
-  })
-}
-
-animateH4();
 function animateH4() {
   const triggerBottom = window.innerHeight * 1.1;
 
@@ -53,8 +45,6 @@ function animateH4() {
 }
 
 // h2 animation
-window.addEventListener('scroll', animateH2);
-animateH2();
 function animateH2() {
   const triggerBottom = window.innerHeight * 1.1;
 
@@ -66,9 +56,7 @@ function animateH2() {
   })
 }
 
-// rewatch
-window.addEventListener('scroll', animateBtn);
-animateBtn();
+// a-tag animation
 function animateBtn() {
   const triggerBottom = window.innerHeight * 1.1;
 

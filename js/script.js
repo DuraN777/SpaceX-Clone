@@ -6,38 +6,21 @@ const menu = document.querySelector('.mobile-main-menu');
 // Inner section elements
 const h4 = document.querySelectorAll('.animateH4');
 const h2 = document.querySelectorAll('h2');
-const newBtn = document.querySelectorAll('.btn');
+const aBtn = document.querySelectorAll('.btn');
 
 // toggle hamburger menu and hide on scroll
 btn.addEventListener('click', navToggle);
 window.addEventListener('scroll', scrollFunction);
 
-    // function for each tag group
-// window.addEventListener('scroll', animateH4);
-// animateH4();
-// window.addEventListener('scroll', animateH2);
-// animateH2();
-// window.addEventListener('scroll', animateBtn);
-// animateBtn();
+// Animation on inner-section elements
+window.addEventListener('scroll', ()=> animateMe(h4));
+animateMe(h4);
 
-// one function to rule them all
-window.addEventListener('scroll', animateTag(h4));
-animateTag(h4);
-window.addEventListener('scroll', animateTag(h2));
-animateTag(h2);
-window.addEventListener('scroll', animateTag(newBtn));
-animateTag(newBtn);
+window.addEventListener('scroll', () => animateMe(h2));
+animateMe(h2);
 
-function animateTag(tags) {
-  const triggerBottom = window.innerHeight * 1.1;
-
-  tags.forEach((tag) => {
-  let tagTop = tag.getBoundingClientRect().top;
-    if(tagTop < triggerBottom) {
-      tag.classList.add('show');
-    }
-  })
-}
+window.addEventListener('scroll', () => animateMe(aBtn));
+animateMe(aBtn);
 
       /* Functions */
 
@@ -55,51 +38,66 @@ function scrollFunction() {
   menu.classList.remove('show-menu');
 }
 
+// Animation for inner-section
+function animateMe(tags) {
+  const triggerBottom = window.innerHeight * 1.1;
+
+  tags.forEach(tag => {
+    let top = tag.getBoundingClientRect().top;
+    if (top < triggerBottom){
+      tag.classList.add('show');
+    }
+  })
+}
+
+        /*  OLDER FUNCTIONS BEFORE OPTIMIZATION*/
+
       //Section-Inner fadeIn Animation
-// h4 animation
-function animateH4() {
-  const triggerBottom = window.innerHeight * 1.1;
 
-  h4.forEach(h => {
-  const hTop = h.getBoundingClientRect().top;
-    if(hTop < triggerBottom) {
-    h.classList.add('show');
-    }
-  })
-}
+          // function for each tag group
+// window.addEventListener('scroll', animateH4);
+// animateH4();
+// window.addEventListener('scroll', animateH2);
+// animateH2();
+// window.addEventListener('scroll', animateBtn);
+// animateBtn();
 
-// h2 animation
-function animateH2() {
-  const triggerBottom = window.innerHeight * 1.1;
-
-  h2.forEach(h => {
-  const hTop = h.getBoundingClientRect().top;
-    if(hTop < triggerBottom) {
-    h.classList.add('show');
-    }
-  })
-}
-
-// a-tag animation
-function animateBtn() {
-  const triggerBottom = window.innerHeight * 1.1;
-
-  newBtn.forEach(btn => {
-  const btnTop = btn.getBoundingClientRect().top;
-    if(btnTop < triggerBottom) {
-    btn.classList.add('show');
-    }
-  })
-}
-
-
-// function animateTag(tags) {
+  // h4 animation
+// function animateH4() {
 //   const triggerBottom = window.innerHeight * 1.1;
 
-//   tags.forEach((tag) => {
-//   let tagTop = tag.getBoundingClientRect().top;
-//     if(tagTop < triggerBottom) {
-//       tag.classList.add('show');
+//   h4.forEach(h => {
+//   const hTop = h.getBoundingClientRect().top;
+//     if(hTop < triggerBottom) {
+//     h.classList.add('show');
 //     }
 //   })
 // }
+
+  // h2 animation
+// function animateH2() {
+//   const triggerBottom = window.innerHeight * 1.1;
+
+//   h2.forEach(h => {
+//   const hTop = h.getBoundingClientRect().top;
+//     if(hTop < triggerBottom) {
+//     h.classList.add('show');
+//     }
+//   })
+// }
+
+  // a-tag animation
+// function animateBtn() {
+//   const triggerBottom = window.innerHeight * 1.1;
+
+//   aBtn.forEach(btn => {
+//   const btnTop = aBtn.getBoundingClientRect().top;
+//     if(btnTop < triggerBottom) {
+//     aBtn.classList.add('show');
+//     }
+//   })
+// }
+
+    /* A WORK IN PROGRESS */
+// one function to rule them all
+

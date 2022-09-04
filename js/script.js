@@ -39,7 +39,7 @@ function scrollFunction() {
 }
 
   /* Reusable func, iterates through node list
-     and adds a style-class */
+  and adds a style-class */
 // tags =  nodeList of html elements (tags)
 // style = a css class name to add to HTML element.
 function addStyle(tags, style) {
@@ -100,7 +100,3 @@ function addStyle(tags, style) {
 //     }
 //   })
 // }
-
-    /* A WORK IN PROGRESS */
-// one function to rule them all
-

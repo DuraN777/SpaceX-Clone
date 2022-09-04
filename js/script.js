@@ -8,6 +8,9 @@ const h4 = document.querySelectorAll('.animateH4');
 const h2 = document.querySelectorAll('.animateH2');
 const aBtn = document.querySelectorAll('.btn');
 
+// Inner-page counters
+const counters = document.querySelectorAll('.stats-counter');
+
 // toggle hamburger menu and hide on scroll
 btn.addEventListener('click', navToggle);
 window.addEventListener('scroll', scrollFunction);
@@ -21,6 +24,16 @@ addStyle(h2, 'show');
 
 window.addEventListener('scroll', () => addStyle(aBtn, 'show'));
 addStyle(aBtn, 'show');
+
+// Counter Animation on scroll
+window.addEventListener('scroll', () => {
+  // calculate current position of scroll
+  const scrollPosition = window.scrollY;
+  //compare and start counting 
+  if (scrollPosition > 100) {
+    countUp();
+  }
+})
 
       /* Functions */
 
@@ -51,6 +64,32 @@ function addStyle(tags, style) {
       tag.classList.add(style);
     }
   })
+}
+
+//  COUNTERS
+
+function countUp() {
+  counters.forEach(counter => {
+    const updateCount = () => {
+      // these methods return a string, a + operator converts them to integers
+      const target = +counter.getAttribute('data-target');
+      const count = +counter.innerText;
+
+      // speed of counting depends on increment
+      const inc = target / 200;
+
+      // Check if target is reached
+      if (count < target) {
+        // Add inc to count and output in counter
+        counter.innerText = Math.ceil(count + inc);
+        // Call function every 200 ms
+        setTimeout(updateCount, 100);
+      } else {
+        counter.innerText = target;
+      }
+    };
+    updateCount();
+  });
 }
 
         /*  OLDER FUNCTIONS BEFORE OPTIMIZATION*/

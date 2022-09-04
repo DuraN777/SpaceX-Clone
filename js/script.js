@@ -5,7 +5,7 @@ const menu = document.querySelector('.mobile-main-menu');
 
 // Inner section elements
 const h4 = document.querySelectorAll('.animateH4');
-const h2 = document.querySelectorAll('h2');
+const h2 = document.querySelectorAll('.animateH2');
 const aBtn = document.querySelectorAll('.btn');
 
 // toggle hamburger menu and hide on scroll

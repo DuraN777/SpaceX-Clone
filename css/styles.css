@@ -419,6 +419,26 @@ footer ul li a:hover{
   animation-fill-mode: both;
 }
 
+/* Statistic */
+.stats {
+  display: flex;
+  max-width: 800px;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.stats-counter {
+  font-size: 140px;
+}
+
+.stats-item h4{
+  font-size: 22px;
+  font-weight: 300;
+}
+
 
 /* Animations */
 @keyframes fadeIn {

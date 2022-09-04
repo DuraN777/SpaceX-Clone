@@ -13,14 +13,14 @@ btn.addEventListener('click', navToggle);
 window.addEventListener('scroll', scrollFunction);
 
 // Animation on inner-section elements
-window.addEventListener('scroll', ()=> animateMe(h4));
-animateMe(h4);
+window.addEventListener('scroll', ()=> animateMe(h4, 'show'));
+animateMe(h4, 'show');
 
-window.addEventListener('scroll', () => animateMe(h2));
-animateMe(h2);
+window.addEventListener('scroll', () => animateMe(h2, 'show'));
+animateMe(h2, 'show');
 
-window.addEventListener('scroll', () => animateMe(aBtn));
-animateMe(aBtn);
+window.addEventListener('scroll', () => animateMe(aBtn, 'show'));
+animateMe(aBtn, 'show');
 
       /* Functions */
 
@@ -39,13 +39,13 @@ function scrollFunction() {
 }
 
 // Animation for inner-section
-function animateMe(tags) {
+function animateMe(tags, style) {
   const triggerBottom = window.innerHeight * 1.1;
 
   tags.forEach(tag => {
     let top = tag.getBoundingClientRect().top;
     if (top < triggerBottom){
-      tag.classList.add('show');
+      tag.classList.add(style);
     }
   })
 }

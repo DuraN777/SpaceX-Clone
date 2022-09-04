@@ -13,14 +13,14 @@ btn.addEventListener('click', navToggle);
 window.addEventListener('scroll', scrollFunction);
 
 // Animation on inner-section elements
-window.addEventListener('scroll', ()=> animateMe(h4, 'show'));
-animateMe(h4, 'show');
+window.addEventListener('scroll', ()=> addStyle(h4, 'show'));
+addStyle(h4, 'show');
 
-window.addEventListener('scroll', () => animateMe(h2, 'show'));
-animateMe(h2, 'show');
+window.addEventListener('scroll', () => addStyle(h2, 'show'));
+addStyle(h2, 'show');
 
-window.addEventListener('scroll', () => animateMe(aBtn, 'show'));
-animateMe(aBtn, 'show');
+window.addEventListener('scroll', () => addStyle(aBtn, 'show'));
+addStyle(aBtn, 'show');
 
       /* Functions */
 
@@ -38,8 +38,11 @@ function scrollFunction() {
   menu.classList.remove('show-menu');
 }
 
-// Animation for inner-section
-function animateMe(tags, style) {
+  /* Reusable func, iterates through node list
+     and adds a style-class */
+// tags =  nodeList of html elements (tags)
+// style = a css class name to add to HTML element.
+function addStyle(tags, style) {
   const triggerBottom = window.innerHeight * 1.1;
 
   tags.forEach(tag => {

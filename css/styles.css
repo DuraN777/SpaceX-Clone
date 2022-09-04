@@ -30,7 +30,7 @@ ul {
   width: 100%;
   z-index: 3;
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
   align-items: center;
   text-transform: uppercase;
   height: 100px;
@@ -41,6 +41,7 @@ ul {
 .logo {
   width: 210px;
   height: auto;
+  margin-right: 25px;
 }
 
 .logo img {
@@ -51,17 +52,24 @@ ul {
 
 /* Desktop Menu */
 .desktop-main-menu {
-  margin-right: 50px;
+  display: flex;
+  margin-right: 20px;
 }
 
 .desktop-main-menu ul {
   display: flex;
+  font-size: 15px;
 }
 
 .desktop-main-menu li {
   position: relative;
   margin-right: 20px;
   padding-bottom: 2px;
+}
+
+.navigation-right {
+  position: absolute;
+  right: 40px;
 }
 
 /* Menu bottom animation */
@@ -454,7 +462,7 @@ footer ul li a:hover{
 
 /* Media Queries */
 
-@media (max-width: 1130px) {
+@media (max-width: 1060px) {
   /* Hide desktop menu */
   .desktop-main-menu {
     display: none;

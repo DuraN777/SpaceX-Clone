@@ -410,6 +410,7 @@ footer ul li a:hover{
 .section-inner-center h1{
   font-size: 100px;
   animation: fadeIn 1s ease-in-out;
+  margin-bottom: 15px;
 }
 
 .section-inner-center h3{
@@ -517,5 +518,34 @@ footer ul li a:hover{
   .logo {
     width: 150px;
     margin: auto;
+  }
+
+  /* Inner pages */
+  /* .stats {
+    flex-direction: column;
+  } */
+
+  .section-inner-center {
+    width: 60%;
+  }
+  .section-inner-center h1 {
+    font-size: 48px;
+  }
+
+  .section-inner-center h3 {
+    font-size: 15px;
+  }
+
+  .stats {
+    padding: 40px 20px;
+  }
+  .stats-counter {
+    font-size: 48px;
+  }
+  
+  .stats-item h4{
+    font-size: 12px;
+    font-weight: 300;
+    margin-bottom: 20px;
   }
 }

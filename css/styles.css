@@ -393,6 +393,10 @@ footer ul li a:hover{
   background-image: url(../img/falcon-9.webp);
 }
 
+.bg-falcon-heavy {
+  background-image: url(../img/falcon-heavy.webp);
+}
+
 .section-animate {
   animation: fadeInBg 2s ease-in-out;
 }
@@ -405,6 +409,7 @@ footer ul li a:hover{
   transform: translate(-50%, -50%);
   text-transform: uppercase;
   text-align: center;
+  width: 100%;
 }
 
 .section-inner-center h1{

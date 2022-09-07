@@ -76,7 +76,7 @@ function countUp() {
       const count = +counter.innerText;
 
       // Speed of counting depends on increment
-      const inc = target / 200;
+      const inc = target / 100;
 
       // Check if target is reached
       if (count < target) {

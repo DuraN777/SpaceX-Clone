@@ -397,6 +397,10 @@ footer ul li a:hover{
   background-image: url(../img/falcon-heavy.webp);
 }
 
+.bg-dragon {
+  background-image: url(../img/dragon.webp);
+}
+
 .section-animate {
   animation: fadeInBg 2s ease-in-out;
 }

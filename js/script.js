@@ -26,12 +26,18 @@ window.addEventListener('scroll', () => addStyle(aBtn, 'show'));
 addStyle(aBtn, 'show');
 
 // Counter Animation on scroll
+
+const scrollStarted = false;
+
+function resetCounter() {
+  counters.forEach(counter => counter.innerHTML = 0)
+}
 window.addEventListener('scroll', () => {
-  // calculate current position of scroll
   const scrollPosition = window.scrollY;
-  //compare and start counting 
   if (scrollPosition > 100) {
     countUp();
+  } else if (scrollPosition < 100) {
+    resetCounter();
   }
 })
 
